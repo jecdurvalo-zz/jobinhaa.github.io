@@ -59,6 +59,7 @@ A sequencia de números é com base em:
 
 #### Ok, acho que tá tudo certo, e agora?
 
+<<Fazendo alterações para um pull request>>
 
 ### Comandos básicos
 
