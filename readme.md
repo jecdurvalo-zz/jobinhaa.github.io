@@ -32,7 +32,7 @@ O VSCode te permite ter uma visualização um pouco melhor do que está acontece
 ![Fluxo](https://static.imasters.com.br/wp-content/uploads/2013/10/git-workflow-release-cycle-4maintenance.png)
 
 
-    Develop [Local] > Release [Local] > Master[Server]
+    Develop [Local] > Release [Local | Temporaly] > Master[Server]
 
 É importante sempre "tagear" a versão da sua atualização para que possamos saber qual tipo de mudança tivemos. **Ex:** Query produção V1.0.2 
 
@@ -68,14 +68,16 @@ Primeiros comandos
         git init
 
         git add [file.txt]
+            (Adicionar somente um arquivo)
 
         git add .
-
-        git add -A
+            (Adicionar tudo)
 
         git status
+            (Verificar o status)
 
         git rm -r [file.txt]
+            (Remover um arquivo específico)
 
         git commit -m "" 
             (Comentário que ao terminar atualização)
@@ -84,48 +86,48 @@ Primeiros comandos
 Manipulando as branches
 
         git checkout -b [Nome da branch] 
-            (cria uma branch e já muda)
+            (Cria uma branch e já muda)
 
         git branch [Nome da branch]
-            (cria a branch)
+            (Cria a branch)
 
         git branch -d [Nome da branch]  
-            (deleta a branch)
+            (Deleta a branch)
 
         git branch -m
-            (renomeia a branch)
+            (Renomeia a branch)
 
         git checkout [Nome da branch]
-            (muda de branch)
+            (Muda de branch)
 
 Enviando para o servidor
 
         git push [nome do repositorio] 
-            (envia essa informação para o servidor)
+            (Envia essa informação para o servidor)
 
         git push [nome do repositorio] --d [Nome da branch] 
             (Remove uma branch do servidor)
 
         git clone [url]
-            (clona um repositório)
+            (Clona um repositório)
 
 
 Criando Tags & Mesclando arquivos
 
         git tag [nome da Tag]
-            (cria Tags)
+            (Cria Tags)
 
         git merge [Nome da branch] 
-            (faz a mescla da sua branch atual com qual você quer)
+            (Faz a mescla da sua branch atual com qual você quer)
 
         git merge [source branch] [target branch] 
-            (faz a mescla entre duas branches)
+            (Faz a mescla entre duas branches)
 
 
 Outros comandos
 
         git stash 
-            (salva os arquivos, deixando em um estado "WIP" onde você pode mudar de branch sem ter que fazer commit)
+            (Salva os arquivos, deixando em um estado "WIP" onde você pode mudar de branch sem ter que fazer commit)
 
         git reset HEAD 
             (Reseta o seu stage (caso não queira enviar ainda))
@@ -134,20 +136,23 @@ Outros comandos
             (Log unificado)
 
         git diff [source branch] [target branch] 
-            (mostra a diferença de uma branch para outra)
+            (Mostra a diferença de uma branch para outra)
 
 Gerenciando versões remotas
 
         git remote add [nome do repositorio] [url]
+            (Adicionar uma url remota)
 
-        git remote -v (ver quais remotos você tem)
+        git remote -v 
+            (Ver quais remotos você tem)
 
         git remote rm [nome do repositorio] 
+            (Remover uma conexão remota)
 
         git pull [nome do repositorio] [Nome da branch] 
-            (puxa as informações mais atuais)
+            (Busca as informações mais atuais)
 
         git fetch [nome do repositorio] 
-            (sincronizar com o atual)
+            (Sincronizar com o projeto atual)
 
 
