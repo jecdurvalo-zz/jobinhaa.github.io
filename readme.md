@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 [Leer en español](hsp.md)
 
 ## Como funciona?
@@ -62,8 +66,10 @@ A sequencia de números é com base em:
 
 
 Primeiros comandos
-        git init
 
+        git init
+            (Comando inicial)
+            
         git add [file.txt]
             (Adicionar somente um arquivo)
 
