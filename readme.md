@@ -1,4 +1,4 @@
-[Leer en español](https://jobinhaa.github.io/HSP )
+[Leer en español](hsp.md)
 
 ## Como funciona?
 
