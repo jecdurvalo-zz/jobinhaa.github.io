@@ -1,4 +1,4 @@
-[Leer en español](/hsp.md)
+[Leer en español](hsp)
 
 ## Como funciona?
 
