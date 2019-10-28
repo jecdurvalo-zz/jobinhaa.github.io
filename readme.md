@@ -1,153 +1,153 @@
-[Leer en español](https://jobinhaa.github.io/HSP )
+[Ler em português](https://jobinhaa.github.io/ )
 
-## Como funciona?
+## ¿Cómo funciona?
 
-O [Git](https://git-scm.com) é uma ferramenta muito utilizada no ambiente de desenvolvimento para fazer o versionamento dos arquivos.
+El [Git](https://git-scm.com) es una herramienta muy utilizada en el ambiente de desarollo para control de version.
 
-Já o [Github](https://github.com) é o site que hospeda os arquivos/projetos que estão sendo versionados pelo Git (*existem outros que fazem a mesma coisa em cima do Git mas esse é o mais utilizado. Ex: Gitlab, Bitbucket*). Para utilizá-lo é necessário ter uma conta no **Github** (pessoal ou da empresa) e o **Git** instalado na sua máquina.
+Ya el [Github](https://github.com) es un sitio que hospeda los archivos/projectos que fueron versionados por el Git(*existen otros sitios que hacen lo mismo, pero el Github es lo mas conocido. Ej: Gitlab, Bitbucket*). Para usarlo es necesario crear una cuenta en el **Github** (personal o de la compania) y instalar el **Git** en su computadora.
 
-Não é obrigatório ter alguma IDE(programa) para fazer o versionamento, o CMD já funciona, no entanto como o terminal do Windows não é tão legal, indico a utilização do [VSCode (Visual Studio Code)](https://code.visualstudio.com).
+No es necesario tener alguna IDE(programa) para hacer el versionamiento, el CMD funciona bien, pero como el terminal del Windows no es muy agradable, indico la utilizacion del [VSCode (Visual Studio Code)](https://code.visualstudio.com).
 
-O VSCode te permite ter uma visualização um pouco melhor do que está acontecendo e também possui o terminal integrado com Unix, dessa forma conseguimos usar os comandos do Linux ツ
+El VSCode permite tener una mejor visualizacion do que ocurre en su versionamiento y tambien tiene un terminal Unix integrado, asi puede acceder los comandos del Linux sin problemas ツ
 
-### Comandos Linux super necessários
-    cd - Navegar entre pastas
-    mkdir - Criar repositórios
-    touch - Criar arquivos
-    ls - Listar arquivos
-    clear - Limpar terminal
+### Comandos Linux MUY necesarios
+    cd - Navegar entre los archivos
+    mkdir - Crear un repositorio
+    touch - Crear archivos
+    ls - Enumerar los archivos
+    clear - Limpiar el terminal
 
-### [GIT] Quais são as boas práticas?
+### [GIT] ¿Cuales son las mejores practicas?
 
-- Nunca faça alterações diretamente na branch principal (**master**)
-- Tenha sempre uma branch local para fazer seus ajustes
-- Sempre comente no *commit* o que você alterou 
-- Utilizar o *Pull request* (também conhecido como PR) para fazer alterações na branch principal
+- Nunca haga cambios directamente en la branch principal (**master**)
+- Tenga siempre una branch local para hacer sus ajustes
+- Siempre comente en el *commit* cual cambio hizo 
+- Utilize el *Pull request* (tambien conocido como PR) para hacer cambios en la branch principal
 
-**Por que toda essa burocracia? R:** Todo mundo pode estar usando a mesma branch ao mesmo tempo, dessa forma temos que ter certeza que o que temos ali é a versão atualizada que servirá como base para todo o time. [Mais infos](https://git-scm.com/book/pt-br/v1/Git-Distribu%C3%ADdo-Contribuindo-Para-Um-Projeto)
+**¿Por que toda essa burocracia? R:** Todo mundo puede usar la misma branch a lo mismo tiempo, con esas buenas practicas tenemos certeza que todo que tenemos allá es la version actual y que va a servir de base para todo el equipo. [Mas infos](https://git-scm.com/book/pt-br/v1/Git-Distribu%C3%ADdo-Contribuindo-Para-Um-Projeto)
 
-#### Entendendo o fluxo
+#### Entendiendo el flujo
 
-![Fluxo](https://static.imasters.com.br/wp-content/uploads/2013/10/git-workflow-release-cycle-4maintenance.png)
+![Flujo](https://static.imasters.com.br/wp-content/uploads/2013/10/git-workflow-release-cycle-4maintenance.png)
 
 
     Develop [Local] > Release [Local | Temporaly] > Master[Server]
 
-É importante sempre "tagear" a versão da sua atualização para que possamos saber qual tipo de mudança tivemos. **Ex:** Query produção V1.0.2 
+Es importante siempre etiquetar la version de su actualizacion para que podamos saber que tipo de cambio tuvo. **Ej:** Query produccion V1.0.2 
 
-A sequencia de números é com base em:
-1. Mudanças nas funcionalidades [1]
-2. Mudanças pequenas sem alteração na funcionalidade [0]
-3. Conserto de Bug [2]
+La sequencia de numeros es basado en:
+1. Cambios el las características [1]
+2. Cambios chiquitos [0]
+3. Reparo de bugs [2]
 
 
-### Estrutura das Branches
+### Estructura de las Branches
 
-- **Develop** - Branch local onde você desenvolve
-- **Release** - Branch local finalizada e testada só aguardando a aprovação do PR
-- **Hotfix** - Branch para conserto de erros
+- **Develop** - Branch local donde va hacer el desarollo
+- **Release** - Branch local | temporaria - despues de hacer la prueba va hacer el commit y esperar la autorizacion del PR
+- **Hotfix** - Branch para reparos de errores
 - **Master** - Branch principal
 
 
-### Qual a diferença entre criar uma branch local e no servidor?
+### ¿Cual es la diferencia entre crear una branch local y en el server?
 
-*Local branch* - Somente você tem acesso às mudanças
+*Local branch* - Solo vos va a tener accedo a los cambios
 
-*Server branch* - Qualquer pessoa que clonou o projeto tem acesso à essa branch
-
-
-#### Ok, acho que tá tudo certo, e agora?
-
-### Comandos básicos
+*Server branch* - Cualquier persona que clonó el projecto va tener accedo a branch
 
 
-Primeiros comandos
+#### Dale, quedo claro, y ahora?
+
+### Comandos basicos
+
+
+Primeros comandos
         git init
 
         git add [file.txt]
-            (Adicionar somente um arquivo)
+            (Agregar solo un archivo)
 
         git add .
-            (Adicionar tudo)
+            (Agregar todo)
 
         git status
-            (Verificar o status)
+            (Verificar status)
 
         git rm -r [file.txt]
-            (Remover um arquivo específico)
+            (Eliminar un archivo especifico)
 
         git commit -m "" 
-            (Comentário que ao terminar atualização)
+            (Agregar un comentario al finalizar los cambios)
 
 
-Manipulando as branches
+Manejando las branches
 
         git checkout -b [Nome da branch] 
-            (Cria uma branch e já muda)
+            (Crea una branch y ya cambia para la misma)
 
         git branch [Nome da branch]
-            (Cria a branch)
+            (Crea la branch)
 
         git branch -d [Nome da branch]  
-            (Deleta a branch)
+            (Elimina la branch)
 
         git branch -m
-            (Renomeia a branch)
+            (Renombra la branch)
 
         git checkout [Nome da branch]
-            (Muda de branch)
+            (Cambia de branch)
 
-Enviando para o servidor
+Enviando para el server
 
         git push [nome do repositorio] 
-            (Envia essa informação para o servidor)
+            (Envia las infos para el server)
 
         git push [nome do repositorio] --d [Nome da branch] 
-            (Remove uma branch do servidor)
+            (Elimina una branch del server)
 
         git clone [url]
-            (Clona um repositório)
+            (Clona un repositorio)
 
 
-Criando Tags & Mesclando arquivos
+Creando Tags y fusionar archivos
 
         git tag [nome da Tag]
-            (Cria Tags)
+            (Crea Tags)
 
         git merge [Nome da branch] 
-            (Faz a mescla da sua branch atual com qual você quer)
+            (Fusionar la branch actual con la que desea)
 
         git merge [source branch] [target branch] 
-            (Faz a mescla entre duas branches)
+            (Fusionar dos branches -- especificando)
 
 
-Outros comandos
+Otros comandos
 
         git stash 
-            (Salva os arquivos, deixando em um estado "WIP", podendo assim trocar de branch)
+            (Salva los archivos y deja en el estado"WIP", asi puede cambiar de branch sin commit)
 
         git reset HEAD 
-            (Reseta o seu stage (caso não queira enviar ainda))
+            (Restablecer el stage (elimina los archivos antes del commit)
 
         git log --oneline
             (Log unificado)
 
         git diff [source branch] [target branch] 
-            (Mostra a diferença de uma branch para outra)
+            (Muestra la diferencia de una branch para otra)
 
-Gerenciando versões remotas
+Manejando versiones remotas
 
         git remote add [nome do repositorio] [url]
-            (Adicionar uma url remota)
+            (Agregar una url remota)
 
         git remote -v 
-            (Ver quais remotos você tem)
+            (Ver que remoto tienes)
 
         git remote rm [nome do repositorio] 
-            (Remover uma conexão remota)
+            (Eliminar una conexion remota)
 
         git pull [nome do repositorio] [Nome da branch] 
-            (Busca as informações mais atuais)
+            (Busca las info actuais)
 
         git fetch [nome do repositorio] 
-            (Sincronizar com o projeto atual)
+            (Sincronizar con el projecto actual)
