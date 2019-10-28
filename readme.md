@@ -1,5 +1,3 @@
-# Mastering Git and Github
-
 ## Como funciona?
 
 O [Git](https://git-scm.com) é uma ferramenta muito utilizada no ambiente de desenvolvimento para fazer o versionamento dos arquivos.
@@ -124,7 +122,7 @@ Criando Tags & Mesclando arquivos
 Outros comandos
 
         git stash 
-            (Salva os arquivos, deixando em um estado "WIP" onde você pode mudar de branch sem ter que fazer commit)
+            (Salva os arquivos, deixando em um estado "WIP", podendo assim trocar de branch)
 
         git reset HEAD 
             (Reseta o seu stage (caso não queira enviar ainda))
@@ -151,5 +149,3 @@ Gerenciando versões remotas
 
         git fetch [nome do repositorio] 
             (Sincronizar com o projeto atual)
-
-
