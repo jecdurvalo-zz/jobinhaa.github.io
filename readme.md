@@ -1,5 +1,5 @@
 
-[Leer en español](../hsp.md)
+[Leer en español](https://github.com/jobinhaa/jobinhaa.github.io/blob/master/hsp.md)
 
 ## Como funciona?
 
